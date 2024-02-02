@@ -23,10 +23,8 @@
                 <td><%= product.publish %></td>
                 <td>
                   <%= link_to "Detalhar", admin_product_path(product), class: 'btn btn-dark' %> |
-                  <%= link_to "Editar", edit_admin_product_path(product), class: 'btn btn-warning' %> 
-                </td>
-                <td> 
-                  <%= button_to "Excluir", admin_product_path(product), method: :delete, class: 'btn btn-danger', data: { confirm: 'Deseja realmente excluír?' } %>
+                  <%= link_to "Editar", edit_admin_product_path(product), class: 'btn btn-warning' %> |
+                  <%= link_to "Excluir", admin_product_path(product), method: :delete, class: 'btn btn-danger', data: { turbo_method: :delete, turbo_confirm: 'Deseja realmente excluir?' } %>
                 </td>
               </tr>
             <% end %>
