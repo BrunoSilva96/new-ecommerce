@@ -35,7 +35,7 @@ module Admin
     def update
       respond_to do |format|
         if @category.update(category_params)
-          format.html { redirect_to admin_categories_path(@category), notice: 'Categoria excluída com sucesso.' }
+          format.html { redirect_to admin_categories_path(@category), notice: 'Categoria atualizada com sucesso.' }
         else
           format.html { render :edit, status: :unprocessable_entity }
         end
@@ -47,7 +47,7 @@ module Admin
       @category.destroy
 
       respond_to do |format|
-        format.html { redirect_to admin_categories_path, notice: 'Categoria atualizada com sucesso.' }
+        format.html { redirect_to admin_categories_path, notice: 'Categoria excluída com sucesso.' }
       end
     end
 
