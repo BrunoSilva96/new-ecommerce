@@ -21,24 +21,19 @@ module Admin
     # POST /categories or /categories.json
     def create
       @category = Category.new(category_params)
-
-      respond_to do |format|
         if @category.save
-          format.html { redirect_to admin_categories_path(@category), notice: 'Categoria criada com sucesso.' }
+          redirect_to admin_categories_path(@category), notice: 'Categoria criada com sucesso.'
         else
-          format.html { render :new, status: :unprocessable_entity }
-        end
+          render :new, status: :unprocessable_entity
       end
     end
 
     # PATCH/PUT /categories/1 or /categories/1.json
     def update
-      respond_to do |format|
-        if @category.update(category_params)
-          format.html { redirect_to admin_categories_path(@category), notice: 'Categoria atualizada com sucesso.' }
-        else
-          format.html { render :edit, status: :unprocessable_entity }
-        end
+      if @category.update(category_params)
+        redirect_to admin_categories_path(@category), notice: 'Categoria atualizada com sucesso.'
+      else
+        render :edit, status: :unprocessable_entity
       end
     end
 
