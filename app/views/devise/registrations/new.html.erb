@@ -12,11 +12,9 @@
                 placeholder: 'Nome',
                 input_html: { autocomplet: "nome" }%>
     <%= f.input :phone,
-                required: true,
-                autofocus: true,
+                input_html:{ class: 'mask-phone' },
                 label: false,
-                placeholder: '(xx) x xxxx-xxxx',
-                input_html: { autocomplet: "Telefone" }%>
+                placeholder: '(xx) x xxxx-xxxx'%>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
