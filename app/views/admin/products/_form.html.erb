@@ -8,6 +8,8 @@
     <%= f.input :description %>
     <%= f.input :price %>
     <%= f.input :publish %>
+    <%= f.input :promo %>
+    <%= f.input :promo_price %>
     <%= f.association :category, include_blank: false %>
   </div>
 
@@ -15,3 +17,4 @@
     <%= f.button :submit, 'Salvar', class: 'btn btn-info' %>
   </div>
 <% end %>
+ 
