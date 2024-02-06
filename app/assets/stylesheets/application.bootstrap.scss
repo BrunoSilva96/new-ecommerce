@@ -1,6 +1,11 @@
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons";
-/* ...
- *= require_self
- *= require_tree .
- */
+
+.menu-item-profile {
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.menu-item-profile li:hover {
+	background-color: #e4e4e4;
+}
