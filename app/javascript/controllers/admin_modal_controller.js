@@ -3,7 +3,7 @@ import { Controller } from "@hotwired/stimulus";
 // Connects to data-controller="admin-modal"
 export default class extends Controller {
 	connect() {
-		this.element.setAttribute("data-action", "click->admin-modal#click_modal");
+		this.element.setAttribute("data-action", "admin-modal#click_modal");
 	}
 
 	click_modal(e) {
