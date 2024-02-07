@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   # root "articles#index"
   root to: 'home#index'
   
-  resources :settings, only: [:index]
+  resources :settings, only: [:index] do
+    collection do
+      patch :update_user
+    end
+  end
   
   namespace :admin do
     root to: 'home#index'
