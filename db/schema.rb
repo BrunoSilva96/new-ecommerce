@@ -51,7 +51,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_20_172920) do
     t.string "street", null: false
     t.string "neighborhood", null: false
     t.string "number", null: false
-    t.string "addres_detail"
+    t.string "address_detail"
     t.string "zipcode", null: false
     t.string "city", null: false
     t.string "state", null: false
