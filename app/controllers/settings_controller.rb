@@ -22,7 +22,7 @@ class SettingsController < ApplicationController
         render password_settings_path
       end
     else
-      redirect_to password_settings_path, notice: 'Você precisa informar sua senha atual para t rocar de senha'
+      redirect_to password_settings_path, notice: 'Você precisa informar sua senha atual para trocar de senha'
     end
   end
 
